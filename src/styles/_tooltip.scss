@@ -1,0 +1,121 @@
+.tooltip {
+  position: relative;
+  width: 320px;
+  background-color: $light-box-bg-color;
+  box-shadow: 0 0 10px 1px grey;
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 35px;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: $light-box-bg-color;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px 1px grey;
+  }
+
+  &__photo {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    background-color: $light-box-photo-bg-color;
+  }
+
+  &__info {
+    display: flex;
+    padding: 30px;
+    background: $light-box-info-bg-color;
+    position: relative;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 29px;
+  }
+
+  &__btn  {
+    transition: background-color .2s ease;
+    cursor: pointer;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background-color: $btn-bg-color;
+
+    &:hover {
+      background-color: lighten($btn-bg-color, 2%);
+    }
+
+    &_main {
+      background-color: $btn-main-bg-color;
+      color: $btn-text-color;
+
+      &:hover {
+        background-color: lighten($btn-main-bg-color, 2%);
+      }
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  &__text {
+    color: $light-box-info-text-color;
+  }
+
+  &_dark {
+    &::before {
+      background-color: $dark-box-bg-color;
+      left: auto;
+      top: 30px;
+      right: -10px;
+    }
+
+    .tooltip {
+      &__info {
+        background-color: $dark-box-bg-color;
+      }
+
+      &__photo {
+        background-color: $dark-box-photo-bg-color;
+      }
+
+      &__btns {
+        background-color: $dark-box-btns-bg-color;
+      }
+
+      &__btn_dark {
+        background-color: $dark-box-bg-color;
+        color: $btn-text-color;
+
+        &:hover {
+          background-color: lighten($dark-box-bg-color, 2%);
+        }
+      }
+
+      &__name {
+        color: $dark-box-info-name-text-color;
+      }
+
+      &__text {
+        color: $dark-box-info-text-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=cyrillic,cyrillic-ext");
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  background-color: #e0e0e0;
+}
