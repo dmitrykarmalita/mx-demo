@@ -3,6 +3,7 @@
   width: 320px;
   background-color: $light-box-bg-color;
   box-shadow: 0 0 10px 1px grey;
+  border-radius: 3px;
 
   &::before {
     position: absolute;
@@ -32,6 +33,7 @@
     padding: 30px;
     background: $light-box-info-bg-color;
     position: relative;
+    border-radius: 3px 3px 0 0;
   }
 
   &__wrap {
@@ -45,6 +47,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 29px;
+    border-radius: 0 0 3px 3px;
   }
 
   &__btn  {
@@ -80,6 +83,7 @@
   }
 
   &_dark {
+    border-radius: 3px;
     &::before {
       background-color: $dark-box-bg-color;
       left: auto;
